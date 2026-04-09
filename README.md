@@ -53,3 +53,11 @@ void library_btn_event(lv_event_t *e) {
   }
   Serial.println("SD Card mounted successfully");
 }
+String read_file(const char *path) {
+  File file = SD.open(path);
+  if (!file) return "Failed to open file";
+  String content = "";
+  while (file.available()) content += (char)file.read();
+  file.close();
+  return content;
+}
