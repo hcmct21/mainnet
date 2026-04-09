@@ -80,3 +80,5 @@ void setup() {
   setup_lvgl();
   init_touch();
   create_main_screen();
+  lv_timer_create(lvgl_timer_callback, 5, NULL);
+}
