@@ -120,3 +120,8 @@ void setup_lvgl() {
   static lv_disp_drv_t disp_drv;
   lv_disp_drv_init(&disp_drv);
   disp_drv.hor_res = SCREEN_WIDTH;
+  disp_drv.ver_res = SCREEN_HEIGHT;
+  disp_drv.flush_cb = display_flush;
+  disp_drv.draw_buf = &draw_buf;
+  lv_disp_drv_register(&disp_drv);
+}
