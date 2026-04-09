@@ -135,3 +135,8 @@ void init_sd_card() {
 String read_file(const char *path) {
   File file = SD.open(path);
   if (!file) return "Failed to open file";
+  String content = "";
+  while (file.available()) content += (char)file.read();
+  file.close();
+  return content;
+}
