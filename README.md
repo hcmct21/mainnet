@@ -146,3 +146,5 @@ void show_text(const String &text) {
   lv_obj_set_width(reader_screen, SCREEN_WIDTH - 60);
   lv_obj_set_style_text_font(reader_screen, &lv_font_montserrat_20, 0);
   lv_label_set_text(reader_screen, text.c_str());
+  lv_obj_align(reader_screen, LV_ALIGN_TOP_LEFT, 30, 30);
+}
