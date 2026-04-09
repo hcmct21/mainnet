@@ -88,3 +88,6 @@ void loop() {
 }
 int text_font_size = 20;
 lv_font_t *current_font = &lv_font_montserrat_20;
+#define SCREEN_WIDTH 800
+#define SCREEN_HEIGHT 480
+TFT_eSPI tft = TFT_eSPI();
