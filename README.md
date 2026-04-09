@@ -144,3 +144,4 @@ void show_text(const String &text) {
   reader_screen = lv_label_create(lv_scr_act());
   lv_label_set_long_mode(reader_screen, LV_LABEL_LONG_WRAP);
   lv_obj_set_width(reader_screen, SCREEN_WIDTH - 60);
+  lv_obj_set_style_text_font(reader_screen, &lv_font_montserrat_20, 0);
