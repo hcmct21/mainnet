@@ -36,3 +36,6 @@ void create_main_screen() {
   lv_obj_t *title = lv_label_create(main_screen);
   lv_label_set_text(title, "📖 E-Book Reader");
   lv_obj_align(title, LV_ALIGN_TOP_MID, 0, 30);
+  lv_obj_t *btn_library = lv_btn_create(main_screen);
+  lv_obj_set_size(btn_library, 220, 70);
+  lv_obj_align(btn_library, LV_ALIGN_TOP_MID, 0, 120);
