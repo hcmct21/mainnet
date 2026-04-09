@@ -42,3 +42,5 @@ void create_main_screen() {
   lv_obj_t *label = lv_label_create(btn_library);
   lv_label_set_text(label, "Open Library");
   lv_obj_center(label);
+  lv_obj_add_event_cb(btn_library, library_btn_event, LV_EVENT_CLICKED, NULL);
+}
