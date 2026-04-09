@@ -125,3 +125,8 @@ void setup_lvgl() {
   disp_drv.draw_buf = &draw_buf;
   lv_disp_drv_register(&disp_drv);
 }
+void init_sd_card() {
+  if (!SD.begin()) {
+    Serial.println("SD Card Mount Failed");
+    return;
+  }
