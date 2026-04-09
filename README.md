@@ -69,3 +69,6 @@ void show_text(const String &text) {
   lv_label_set_text(reader_screen, text.c_str());
   lv_obj_align(reader_screen, LV_ALIGN_TOP_LEFT, 30, 30);
 }
+void lvgl_timer_callback() {
+  lv_tick_inc(5);
+}
