@@ -130,3 +130,5 @@ void init_sd_card() {
     Serial.println("SD Card Mount Failed");
     return;
   }
+  Serial.println("SD Card mounted successfully");
+}
