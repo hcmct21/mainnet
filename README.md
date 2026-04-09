@@ -95,3 +95,7 @@ static lv_disp_draw_buf_t draw_buf;
 static lv_color_t buf[SCREEN_WIDTH * 10];
 lv_obj_t *main_screen, *reader_screen;
 String current_book_path = "";
+lv_obj_t *main_screen, *reader_screen;
+String current_book_path = "";
+int current_page = 0;
+int text_font_size = 20;
