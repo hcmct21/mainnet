@@ -148,3 +148,7 @@ void show_text(const String &text) {
   lv_label_set_text(reader_screen, text.c_str());
   lv_obj_align(reader_screen, LV_ALIGN_TOP_LEFT, 30, 30);
 }
+void create_main_screen() {
+  main_screen = lv_scr_act();
+  lv_obj_set_style_bg_color(main_screen, lv_color_hex(bg_color), 0);
+}
