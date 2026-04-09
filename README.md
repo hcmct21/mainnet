@@ -27,3 +27,6 @@ void setup_lvgl() {
   tft.endWrite();
   lv_disp_flush_ready(disp);
 }
+void init_touch() {
+  // Add touch driver code here (XPT2046 or GT911)
+}
