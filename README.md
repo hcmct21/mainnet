@@ -109,3 +109,4 @@ struct Bookmark {
 std::vector<Bookmark> bookmarks;
 void display_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color_p) {
   tft.startWrite();
+  tft.setAddrWindow(area->x1, area->y1, area->x2, area->y2);
