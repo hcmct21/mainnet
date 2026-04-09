@@ -20,4 +20,5 @@ void setup_lvgl() {
   disp_drv.flush_cb = display_flush;
   disp_drv.draw_buf = &draw_buf;
   lv_disp_drv_register(&disp_drv);
-}
+}void display_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color_p) {
+  tft.startWrite();
