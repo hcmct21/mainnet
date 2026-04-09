@@ -44,3 +44,6 @@ void create_main_screen() {
   lv_obj_center(label);
   lv_obj_add_event_cb(btn_library, library_btn_event, LV_EVENT_CLICKED, NULL);
 }
+void library_btn_event(lv_event_t *e) {
+  // Open book list from SD card
+}
