@@ -46,4 +46,10 @@ void create_main_screen() {
 }
 void library_btn_event(lv_event_t *e) {
   // Open book list from SD card
+}void init_sd_card() {
+  if (!SD.begin()) {
+    Serial.println("SD Card Mount Failed");
+    return;
+  }
+  Serial.println("SD Card mounted successfully");
 }
