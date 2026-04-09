@@ -30,3 +30,6 @@ void setup_lvgl() {
 void init_touch() {
   // Add touch driver code here (XPT2046 or GT911)
 }
+void create_main_screen() {
+  main_screen = lv_scr_act();
+  lv_obj_set_style_bg_color(main_screen, lv_color_hex(0x1E1E1E), 0);
