@@ -72,3 +72,11 @@ void show_text(const String &text) {
 void lvgl_timer_callback() {
   lv_tick_inc(5);
 }
+void setup() {
+  Serial.begin(115200);
+  tft.begin();
+  tft.setRotation(1);
+  init_sd_card();
+  setup_lvgl();
+  init_touch();
+  create_main_screen();
