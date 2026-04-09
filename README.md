@@ -33,3 +33,6 @@ void init_touch() {
 void create_main_screen() {
   main_screen = lv_scr_act();
   lv_obj_set_style_bg_color(main_screen, lv_color_hex(0x1E1E1E), 0);
+  lv_obj_t *title = lv_label_create(main_screen);
+  lv_label_set_text(title, "📖 E-Book Reader");
+  lv_obj_align(title, LV_ALIGN_TOP_MID, 0, 30);
