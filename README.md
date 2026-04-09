@@ -86,3 +86,5 @@ void loop() {
   lv_timer_handler();
   delay(5);
 }
+int text_font_size = 20;
+lv_font_t *current_font = &lv_font_montserrat_20;
