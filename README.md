@@ -82,3 +82,7 @@ void setup() {
   create_main_screen();
   lv_timer_create(lvgl_timer_callback, 5, NULL);
 }
+void loop() {
+  lv_timer_handler();
+  delay(5);
+}
