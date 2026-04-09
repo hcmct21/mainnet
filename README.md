@@ -111,3 +111,6 @@ void display_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color
   tft.startWrite();
   tft.setAddrWindow(area->x1, area->y1, area->x2, area->y2);
   tft.pushColors((uint16_t*)color_p, (area->x2-area->x1+1)*(area->y2-area->y1+1), true);
+  tft.endWrite();
+  lv_disp_flush_ready(disp);
+}
