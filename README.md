@@ -114,3 +114,6 @@ void display_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color
   tft.endWrite();
   lv_disp_flush_ready(disp);
 }
+void setup_lvgl() {
+  lv_init();
+  lv_disp_draw_buf_init(&draw_buf, buf, NULL, SCREEN_WIDTH * 10);
