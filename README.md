@@ -106,3 +106,4 @@ struct Bookmark {
   String book_path;
   int page;
 };
+std::vector<Bookmark> bookmarks;
