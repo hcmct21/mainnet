@@ -99,3 +99,6 @@ lv_obj_t *main_screen, *reader_screen;
 String current_book_path = "";
 int current_page = 0;
 int text_font_size = 20;
+bool dark_mode = true;
+uint32_t bg_color = 0x1E1E1E;
+uint32_t text_color = 0xFFFFFF;
