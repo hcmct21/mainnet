@@ -10,3 +10,6 @@ static lv_color_t buf[SCREEN_WIDTH * 10];
 lv_obj_t *main_screen, *book_list, *reader_screen;
 String current_book_path = "";
 int current_page = 0;
+void setup_lvgl() {
+  lv_init();
+  lv_disp_draw_buf_init(&draw_buf, buf, NULL, SCREEN_WIDTH * 10);
