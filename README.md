@@ -140,3 +140,5 @@ String read_file(const char *path) {
   file.close();
   return content;
 }
+void show_text(const String &text) {
+  reader_screen = lv_label_create(lv_scr_act());
