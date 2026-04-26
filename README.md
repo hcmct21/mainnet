@@ -185,3 +185,13 @@ String read_file(const char *path) {
   file.close();
   return content;
 }
+void show_text(const String &text) {
+  if (reader_screen) lv_obj_del(reader_screen);
+  reader_screen = lv_label_create(lv_scr_act());
+  lv_label_set_long_mode(reader_screen, LV_LABEL_LONG_WRAP);
+  lv_obj_set_width(reader_screen, SCREEN_WIDTH - 80);
+  lv_obj_set_style_text_font(reader_screen, &lv_font_montserrat_22, 0);
+  lv_obj_set_style_text_color(reader_screen, lv_color_hex(text_color), 0);
+  lv_label_set_text(reader_screen, text.c_str());
+  lv_obj_align(reader_screen, LV_ALIGN_TOP_LEFT, 40, 80);
+}
