@@ -216,3 +216,9 @@ String get_page_content(int page) {
   if (start >= full_text.length()) return "End of book.";
   return full_text.substring(start, start + chars_per_page);
 }
+void change_font_size(int delta) {
+  text_font_size += delta;
+  if (text_font_size < 14) text_font_size = 14;
+  if (text_font_size > 36) text_font_size = 36;
+  Serial.println("Font size changed to: " + String(text_font_size));
+}
