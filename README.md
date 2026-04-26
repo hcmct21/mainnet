@@ -435,3 +435,5 @@ void loop() {
 */
 // Features: Multi-page reading, bookmarks, dark mode, WiFi download,
 // progress bar, search, cloud sync simulation, statistics
+// TODO: Add PDF support, TTS (text-to-speech), dictionary, 
+// user accounts, and synchronization with Google Drive
