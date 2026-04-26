@@ -323,3 +323,11 @@ void toggle_night_light() {
   night_light = !night_light;
   Serial.println(night_light ? "Night light ON" : "Night light OFF");
 }
+void sync_with_cloud() {
+  if (WiFi.status() == WL_CONNECTED) {
+    Serial.println("Syncing bookmarks and progress to cloud...");
+    // Simulate API call
+    delay(800);
+    Serial.println("Cloud sync completed.");
+  }
+}
