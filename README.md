@@ -152,3 +152,14 @@ void create_main_screen() {
   main_screen = lv_scr_act();
   lv_obj_set_style_bg_color(main_screen, lv_color_hex(bg_color), 0);
 }
+void setup_lvgl() {
+  lv_init();
+  lv_disp_draw_buf_init(&draw_buf, buf, NULL, SCREEN_WIDTH * 10);
+  static lv_disp_drv_t disp_drv;
+  lv_disp_drv_init(&disp_drv);
+  disp_drv.hor_res = SCREEN_WIDTH;
+  disp_drv.ver_res = SCREEN_HEIGHT;
+  disp_drv.flush_cb = display_flush;
+  disp_drv.draw_buf = &draw_buf;
+  lv_disp_drv_register(&disp_drv);
+}
