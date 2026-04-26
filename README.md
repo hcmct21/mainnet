@@ -312,3 +312,9 @@ void set_language(const String &lang) {
   Serial.println("Language changed to: " + lang);
   // Reload UI texts based on language
 }
+int total_reading_time = 0;
+int books_read = 0;
+void update_reading_stats() {
+  total_reading_time += 5; // every 5 seconds
+  Serial.println("Reading time: " + String(total_reading_time) + " minutes");
+}
