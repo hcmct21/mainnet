@@ -209,3 +209,10 @@ void previous_page() {
     show_text(page_text);
   }
 }
+String get_page_content(int page) {
+  String full_text = read_file(current_book_path.c_str());
+  int chars_per_page = 900;
+  int start = page * chars_per_page;
+  if (start >= full_text.length()) return "End of book.";
+  return full_text.substring(start, start + chars_per_page);
+}
