@@ -222,3 +222,9 @@ void change_font_size(int delta) {
   if (text_font_size > 36) text_font_size = 36;
   Serial.println("Font size changed to: " + String(text_font_size));
 }
+void toggle_dark_mode() {
+  dark_mode = !dark_mode;
+  bg_color = dark_mode ? 0x1E1E1E : 0xF8F8F8;
+  text_color = dark_mode ? 0xFFFFFF : 0x222222;
+  lv_obj_set_style_bg_color(lv_scr_act(), lv_color_hex(bg_color), 0);
+}
