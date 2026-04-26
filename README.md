@@ -437,3 +437,5 @@ void loop() {
 // progress bar, search, cloud sync simulation, statistics
 // TODO: Add PDF support, TTS (text-to-speech), dictionary, 
 // user accounts, and synchronization with Google Drive
+// Project is ready to compile and upload to ESP32.
+// Remember to install LVGL, TFT_eSPI libraries and configure pins.
