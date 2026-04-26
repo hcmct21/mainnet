@@ -406,3 +406,13 @@ void periodic_tasks() {
   auto_save_progress();
   if (WiFi.status() == WL_CONNECTED) sync_with_cloud();
 }
+void full_setup() {
+  setup_lvgl();
+  init_sd_card();
+  connect_wifi();
+  create_main_screen();
+  create_title();
+  create_status_bar();
+  create_bottom_navigation();
+  load_last_book();
+}
