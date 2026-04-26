@@ -368,3 +368,10 @@ void create_title() {
   lv_obj_set_style_text_font(title, &lv_font_montserrat_28, 0);
   lv_obj_align(title, LV_ALIGN_TOP_MID, 0, 15);
 }
+void load_last_book() {
+  if (current_book_path != "") {
+    String text = get_page_content(current_page);
+    show_text(text);
+    Serial.println("Loaded last book: " + current_book_path);
+  }
+}
