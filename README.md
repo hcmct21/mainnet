@@ -375,3 +375,8 @@ void load_last_book() {
     Serial.println("Loaded last book: " + current_book_path);
   }
 }
+int screen_brightness = 180;
+void set_screen_brightness(int value) {
+  screen_brightness = constrain(value, 50, 255);
+  // analogWrite(TFT_BL, screen_brightness); // uncomment when pin defined
+}
