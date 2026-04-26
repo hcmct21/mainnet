@@ -304,3 +304,5 @@ void setup_events() {
 // Global variables: current_page, dark_mode, bookmarks, text_font_size, etc.
 // This is a complete basic E-Book Reader for ESP32 + LVGL + TFT
 // You can expand with PDF support, audio, etc. later
+// Project ready! Upload to ESP32 and test.
+// Don't forget to add lv_font_montserrat_20, etc. in LVGL config.
