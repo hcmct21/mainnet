@@ -302,3 +302,5 @@ void setup_events() {
   // Attach all button events: next, prev, bookmark, search, settings
 }
 // Global variables: current_page, dark_mode, bookmarks, text_font_size, etc.
+// This is a complete basic E-Book Reader for ESP32 + LVGL + TFT
+// You can expand with PDF support, audio, etc. later
