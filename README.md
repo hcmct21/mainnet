@@ -228,3 +228,9 @@ void toggle_dark_mode() {
   text_color = dark_mode ? 0xFFFFFF : 0x222222;
   lv_obj_set_style_bg_color(lv_scr_act(), lv_color_hex(bg_color), 0);
 }
+void create_bottom_navigation() {
+  lv_obj_t *bar = lv_obj_create(lv_scr_act());
+  lv_obj_set_size(bar, SCREEN_WIDTH, 80);
+  lv_obj_align(bar, LV_ALIGN_BOTTOM_MID, 0, 0);
+  lv_obj_set_style_bg_color(bar, lv_color_hex(0x2C2C2C), 0);
+}
