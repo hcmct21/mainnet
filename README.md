@@ -263,3 +263,7 @@ void create_status_bar() {
   lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, -20, 10);
   lv_label_set_text(battery_label, "100%");
 }
+void check_sleep_mode() {
+  // Add timer logic here to enter sleep after inactivity
+  if (/* inactivity detected */) enter_sleep_mode();
+}
