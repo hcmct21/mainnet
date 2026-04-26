@@ -401,3 +401,8 @@ void safe_execute(void (*func)()) {
     Serial.println("Error occurred during execution.");
   }
 }
+void periodic_tasks() {
+  update_battery();
+  auto_save_progress();
+  if (WiFi.status() == WL_CONNECTED) sync_with_cloud();
+}
