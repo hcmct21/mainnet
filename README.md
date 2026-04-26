@@ -258,3 +258,8 @@ void download_book(const char* url, const char* save_as) {
     Serial.println("Book downloaded: " + String(save_as));
   }
 }
+void create_status_bar() {
+  battery_label = lv_label_create(lv_scr_act());
+  lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, -20, 10);
+  lv_label_set_text(battery_label, "100%");
+}
