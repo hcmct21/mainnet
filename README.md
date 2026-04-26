@@ -441,3 +441,8 @@ void loop() {
 // Remember to install LVGL, TFT_eSPI libraries and configure pins.
 // Thank you for using E-Book Reader Mainnet
 // Happy Reading! 📚
+void lookup_word(const String &word) {
+  Serial.println("Looking up dictionary for: " + word);
+  // TODO: Connect to offline dictionary or API
+  Serial.println("Meaning: [Dictionary result would appear here]");
+}
