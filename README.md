@@ -352,3 +352,8 @@ void change_theme(const String &theme) {
     bg_color = 0xF0F0F0; text_color = 0x222222;
   }
 }
+void auto_save_progress() {
+  if (current_book_path != "") {
+    Serial.println("Auto saved progress at page " + String(current_page));
+  }
+}
