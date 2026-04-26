@@ -202,3 +202,10 @@ void next_page() {
   update_progress((current_page * 100) / 50); // assume 50 pages max
   Serial.println("Moved to page: " + String(current_page));
 }
+void previous_page() {
+  if (current_page > 0) {
+    current_page--;
+    String page_text = get_page_content(current_page);
+    show_text(page_text);
+  }
+}
