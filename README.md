@@ -331,3 +331,7 @@ void sync_with_cloud() {
     Serial.println("Cloud sync completed.");
   }
 }
+void detect_swipe(int x, int y, int dx, int dy) {
+  if (dx < -50) next_page();
+  if (dx > 50) previous_page();
+}
