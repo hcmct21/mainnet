@@ -298,3 +298,6 @@ void create_main_screen() {
   lv_label_set_text(title, "📖 E-Book Reader - Mainnet");
   lv_obj_align(title, LV_ALIGN_TOP_MID, 0, 20);
 }
+void setup_events() {
+  // Attach all button events: next, prev, bookmark, search, settings
+}
