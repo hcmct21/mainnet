@@ -306,3 +306,9 @@ void setup_events() {
 // You can expand with PDF support, audio, etc. later
 // Project ready! Upload to ESP32 and test.
 // Don't forget to add lv_font_montserrat_20, etc. in LVGL config.
+String current_language = "en";
+void set_language(const String &lang) {
+  current_language = lang;
+  Serial.println("Language changed to: " + lang);
+  // Reload UI texts based on language
+}
