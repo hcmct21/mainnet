@@ -301,3 +301,4 @@ void create_main_screen() {
 void setup_events() {
   // Attach all button events: next, prev, bookmark, search, settings
 }
+// Global variables: current_page, dark_mode, bookmarks, text_font_size, etc.
