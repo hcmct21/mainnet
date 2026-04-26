@@ -433,3 +433,5 @@ void loop() {
    ESP32 + LVGL + TFT + SD Card + WiFi
    Version: 1.0
 */
+// Features: Multi-page reading, bookmarks, dark mode, WiFi download,
+// progress bar, search, cloud sync simulation, statistics
