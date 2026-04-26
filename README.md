@@ -424,3 +424,7 @@ void setup() {
   lv_timer_create(lvgl_timer_callback, 5, NULL);
   lv_timer_create(periodic_tasks, 30000, NULL); // every 30s
 }
+void loop() {
+  lv_timer_handler();
+  delay(5);
+}
