@@ -385,3 +385,8 @@ void set_volume(int vol) {
   audio_volume = constrain(vol, 0, 100);
   Serial.println("Volume set to: " + String(audio_volume) + "%");
 }
+void create_file_list() {
+  lv_obj_t *list = lv_list_create(lv_scr_act());
+  lv_obj_set_size(list, 500, 300);
+  lv_obj_align(list, LV_ALIGN_CENTER, 0, 0);
+}
