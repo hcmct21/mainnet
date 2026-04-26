@@ -248,3 +248,13 @@ void connect_wifi() {
   }
   Serial.println("\nWiFi connected!");
 }
+void download_book(const char* url, const char* save_as) {
+  HTTPClient http;
+  http.begin(url);
+  if (http.GET() == HTTP_CODE_OK) {
+    File file = SD.open(save_as, FILE_WRITE);
+    file.write(http.getStream());
+    file.close();
+    Serial.println("Book downloaded: " + String(save_as));
+  }
+}
