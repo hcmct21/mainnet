@@ -177,3 +177,11 @@ void init_sd_card() {
   }
   Serial.println("SD Card mounted successfully.");
 }
+String read_file(const char *path) {
+  File file = SD.open(path);
+  if (!file) return "Error: Cannot open file " + String(path);
+  String content = "";
+  while (file.available()) content += (char)file.read();
+  file.close();
+  return content;
+}
