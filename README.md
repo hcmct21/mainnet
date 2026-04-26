@@ -357,3 +357,8 @@ void auto_save_progress() {
     Serial.println("Auto saved progress at page " + String(current_page));
   }
 }
+void show_reading_stats() {
+  Serial.println("=== Reading Statistics ===");
+  Serial.println("Total time: " + String(total_reading_time) + " min");
+  Serial.println("Books opened: " + String(books_read));
+}
