@@ -446,3 +446,7 @@ void lookup_word(const String &word) {
   // TODO: Connect to offline dictionary or API
   Serial.println("Meaning: [Dictionary result would appear here]");
 }
+void highlight_text(int start_pos, int length) {
+  Serial.println("Highlighted text from position " + String(start_pos));
+  // Can be used with LVGL label styling
+}
