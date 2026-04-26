@@ -272,3 +272,7 @@ void perform_search() {
   search_keyword = keyword;
   Serial.println("Searching for: " + keyword);
 }
+void show_toc() {
+  Serial.println("Showing Table of Contents...");
+  // Create list of chapters
+}
