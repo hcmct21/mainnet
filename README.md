@@ -267,3 +267,8 @@ void check_sleep_mode() {
   // Add timer logic here to enter sleep after inactivity
   if (/* inactivity detected */) enter_sleep_mode();
 }
+void perform_search() {
+  String keyword = lv_textarea_get_text(search_input);
+  search_keyword = keyword;
+  Serial.println("Searching for: " + keyword);
+}
