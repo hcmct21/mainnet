@@ -390,3 +390,7 @@ void create_file_list() {
   lv_obj_set_size(list, 500, 300);
   lv_obj_align(list, LV_ALIGN_CENTER, 0, 0);
 }
+void add_book_to_list(const char* name) {
+  // lv_list_add_btn(...) - will be implemented in full UI
+  Serial.println("Added to library: " + String(name));
+}
