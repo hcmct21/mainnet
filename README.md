@@ -416,3 +416,11 @@ void full_setup() {
   create_bottom_navigation();
   load_last_book();
 }
+void setup() {
+  Serial.begin(115200);
+  tft.begin();
+  tft.setRotation(1);
+  full_setup();
+  lv_timer_create(lvgl_timer_callback, 5, NULL);
+  lv_timer_create(periodic_tasks, 30000, NULL); // every 30s
+}
