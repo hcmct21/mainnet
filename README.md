@@ -439,3 +439,5 @@ void loop() {
 // user accounts, and synchronization with Google Drive
 // Project is ready to compile and upload to ESP32.
 // Remember to install LVGL, TFT_eSPI libraries and configure pins.
+// Thank you for using E-Book Reader Mainnet
+// Happy Reading! 📚
