@@ -428,3 +428,8 @@ void loop() {
   lv_timer_handler();
   delay(5);
 }
+/* 
+   E-Book Reader Mainnet Project
+   ESP32 + LVGL + TFT + SD Card + WiFi
+   Version: 1.0
+*/
