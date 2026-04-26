@@ -239,3 +239,12 @@ void add_bookmark() {
   bookmarks.push_back(bm);
   Serial.println("Bookmark saved at page " + String(current_page));
 }
+void connect_wifi() {
+  WiFi.begin(ssid, password);
+  Serial.print("Connecting to WiFi");
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("\nWiFi connected!");
+}
