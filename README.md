@@ -195,3 +195,10 @@ void show_text(const String &text) {
   lv_label_set_text(reader_screen, text.c_str());
   lv_obj_align(reader_screen, LV_ALIGN_TOP_LEFT, 40, 80);
 }
+void next_page() {
+  current_page++;
+  String page_text = get_page_content(current_page);
+  show_text(page_text);
+  update_progress((current_page * 100) / 50); // assume 50 pages max
+  Serial.println("Moved to page: " + String(current_page));
+}
