@@ -343,3 +343,12 @@ void list_books_on_sd() {
     file = root.openNextFile();
   }
 }
+String current_theme = "dark";
+void change_theme(const String &theme) {
+  current_theme = theme;
+  if (theme == "dark") {
+    bg_color = 0x1E1E1E; text_color = 0xFFFFFF;
+  } else {
+    bg_color = 0xF0F0F0; text_color = 0x222222;
+  }
+}
