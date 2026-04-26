@@ -362,3 +362,9 @@ void show_reading_stats() {
   Serial.println("Total time: " + String(total_reading_time) + " min");
   Serial.println("Books opened: " + String(books_read));
 }
+void create_title() {
+  lv_obj_t *title = lv_label_create(lv_scr_act());
+  lv_label_set_text(title, "📖 E-Book Reader Mainnet v1.0");
+  lv_obj_set_style_text_font(title, &lv_font_montserrat_28, 0);
+  lv_obj_align(title, LV_ALIGN_TOP_MID, 0, 15);
+}
