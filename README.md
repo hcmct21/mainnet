@@ -335,3 +335,11 @@ void detect_swipe(int x, int y, int dx, int dy) {
   if (dx < -50) next_page();
   if (dx > 50) previous_page();
 }
+void list_books_on_sd() {
+  File root = SD.open("/");
+  File file = root.openNextFile();
+  while (file) {
+    Serial.println("Found book: " + String(file.name()));
+    file = root.openNextFile();
+  }
+}
