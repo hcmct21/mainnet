@@ -450,3 +450,7 @@ void highlight_text(int start_pos, int length) {
   Serial.println("Highlighted text from position " + String(start_pos));
   // Can be used with LVGL label styling
 }
+void text_to_speech(const String &text) {
+  Serial.println("Speaking: " + text.substring(0, 100) + "...");
+  // Integrate with ESP32 audio library later
+}
