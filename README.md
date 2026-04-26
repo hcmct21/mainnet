@@ -380,3 +380,8 @@ void set_screen_brightness(int value) {
   screen_brightness = constrain(value, 50, 255);
   // analogWrite(TFT_BL, screen_brightness); // uncomment when pin defined
 }
+int audio_volume = 70;
+void set_volume(int vol) {
+  audio_volume = constrain(vol, 0, 100);
+  Serial.println("Volume set to: " + String(audio_volume) + "%");
+}
