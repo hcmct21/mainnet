@@ -394,3 +394,10 @@ void add_book_to_list(const char* name) {
   // lv_list_add_btn(...) - will be implemented in full UI
   Serial.println("Added to library: " + String(name));
 }
+void safe_execute(void (*func)()) {
+  try {
+    func();
+  } catch (...) {
+    Serial.println("Error occurred during execution.");
+  }
+}
