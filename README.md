@@ -276,3 +276,14 @@ void show_toc() {
   Serial.println("Showing Table of Contents...");
   // Create list of chapters
 }
+void setup() {
+  Serial.begin(115200);
+  tft.begin(); tft.setRotation(1);
+  init_sd_card();
+  setup_lvgl();
+  create_main_screen();
+  create_bottom_navigation();
+  create_status_bar();
+  connect_wifi();
+  lv_timer_create(lvgl_timer_callback, 5, NULL);
+}
