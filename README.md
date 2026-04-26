@@ -318,3 +318,8 @@ void update_reading_stats() {
   total_reading_time += 5; // every 5 seconds
   Serial.println("Reading time: " + String(total_reading_time) + " minutes");
 }
+bool night_light = false;
+void toggle_night_light() {
+  night_light = !night_light;
+  Serial.println(night_light ? "Night light ON" : "Night light OFF");
+}
