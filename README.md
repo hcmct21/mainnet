@@ -170,3 +170,10 @@ void display_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color
   tft.endWrite();
   lv_disp_flush_ready(disp);
 }
+void init_sd_card() {
+  if (!SD.begin()) {
+    Serial.println("SD Card Mount Failed! Please check card.");
+    return;
+  }
+  Serial.println("SD Card mounted successfully.");
+}
